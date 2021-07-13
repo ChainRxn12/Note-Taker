@@ -13,7 +13,8 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'));
+// app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/api/notes', (req, res) => {
     res.json(allNotes.slice(1));
@@ -45,8 +46,7 @@ function createNewNote(body, notesArray) {
     notesArray[0]++;
 
     notesArray.push(newNote);
-    fs.writeFileSync(path.join(__dirname, './db/db.json'),
-    json.stringify(notesArray, null, 2));
+    fs.writeFileSync(path.join(__dirname, './db/db.json'), JSON.stringify(notesArray, null, 2));
 
     return newNote;
 };
