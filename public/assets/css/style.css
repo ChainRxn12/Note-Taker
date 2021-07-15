@@ -65,14 +65,16 @@ body {
   background-color: #fff6e5;
 }
 
-/* .list-item-title {
+.list-item-title {
   display: inline-block;
   width: 75%;
-} */
+  background-color: #fff6e5;
+}
 
 .list-container i {
   font-size: 1.1rem;
   cursor: pointer;
+  background-color: #fff6e5;
 }
 
 .list-container .list-group-item {
@@ -80,4 +82,5 @@ body {
   border-right: none;
   padding: 20px;
   cursor: pointer;
+  background-color: #fff6e5;
 }
