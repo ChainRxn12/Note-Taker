@@ -131,7 +131,7 @@ const renderNoteList = async (notes) => {
     liEl.classList.add('list-group-item');
 
     const spanEl = document.createElement('span');
-    spanEl.classList.add('list-item-title');
+    // spanEl.classList.add('list-item-title');
     spanEl.innerText = text;
     spanEl.addEventListener('click', handleNoteView);
 
@@ -169,6 +169,7 @@ const renderNoteList = async (notes) => {
     noteListItems.forEach((note) => noteList[0].append(note));
   }
 };
+
 
 // Gets notes from the db and renders them to the sidebar
 const getAndRenderNotes = () => getNotes().then(renderNoteList);

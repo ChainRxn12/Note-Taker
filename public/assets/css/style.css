@@ -60,10 +60,10 @@ body {
   border-top-left-radius: 0;
 }
 
-.list-item-title {
+/* .list-item-title {
   display: inline-block;
   width: 75%;
-}
+} */
 
 .list-container i {
   font-size: 1.1rem;
